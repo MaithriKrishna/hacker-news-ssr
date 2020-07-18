@@ -1,0 +1,51 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+
+  th{
+    background: darkorange;
+    color: white;
+  }
+  
+  td, th {
+    text-align: center;
+    vertical-align: bottom;
+    width: 5%;
+    padding-right: 30px;
+  }
+
+  td {
+    padding: 6px 30px 6px 0;
+  }
+
+
+  td:last-child, th:last-child {
+    width: 80%;
+    text-align: left;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #dddddd;
+  }
+
+  .upVote{
+    width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 10px solid grey;
+      display: inline-block;
+  }
+
+  .description{
+      color: grey;
+  }
+
+  .highlight{
+    color: black;
+  }
+
+  .clickable{
+      cursor: pointer;
+  }
