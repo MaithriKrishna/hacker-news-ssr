@@ -2,12 +2,12 @@ import React from "react";
 import { UpVote } from "./upVote";
 import { Description } from "./description";
 
-export const Content = ({ news }) =>
-    news.length && news.map(info =>
-        <tr key={info.id}>
-            <td>{info.id}</td>
-            <td>{info.votes}</td>
-            <td><UpVote info={info} /></td>
-            <td><Description info={info} /></td>
+export const Content = ({ news, updateModifiedNews }) =>
+    news.hits.length && news.hits.map(info =>
+        <tr key={info.objectID}>
+            <td>{info.num_comments}</td>
+            <td>{info.points}</td>
+            <td><UpVote news={news} info={info} updateModifiedNews={updateModifiedNews} /></td>
+            <td><Description info={info} news={news} updateModifiedNews={updateModifiedNews}/></td>
         </tr>
     );
