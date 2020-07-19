@@ -14,13 +14,13 @@ const state = (page, news) => {
                 backgroundColor: 'blue',
                 borderColor: 'blue',
                 borderWidth: 2,
-                data: votes                                     
+                data: votes
             }
         ]
     }
 }
 
-export const LineChart = ({ page, news }) =>
+export default ({ page, news }) =>
     <div className="lineChart sticky">
         <Line
             data={state(page, news)}

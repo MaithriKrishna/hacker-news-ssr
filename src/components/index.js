@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import loadable from '@loadable/component'
 import { fetchNews, updateModifiedNews } from '../redux/actions'
 import { setLocalStorage, getLocalStorageData, setStateWithLocalStorage } from "./helper";
-import { LineChart } from "./lineChart";
 import { PaginationLinks } from "./paginationlinks";
 import { Routes } from "./routes";
 import "./style.css";
+
+const LineChart = loadable(() => import('./lineChart'))
 
 const News = ({ isFetching, news, fetchNews, updateModifiedNews }) => {
 

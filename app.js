@@ -9,6 +9,10 @@ const port = process.env.PORT || 8080;
 
 app.use('/hackerNews/web', express.static(path.resolve(__dirname, '../web')));
 
+app.use('/public', express.static(path.resolve(__dirname, '../web')));
+
+
+
 const initialState = (res) => {
   return {
     isFetching: false,
