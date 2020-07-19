@@ -1,10 +1,11 @@
-export default function template(title, content = "",preloadedState) {
+export default function template(title, content = "", preloadedState) {
   let page = `<!DOCTYPE html>
               <html lang="en">
               <head>
                 <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title> ${title} </title>
-                <link href="/hackerNews/assets/style.css" rel="stylesheet">
+                <link href="/hackerNews/web/index.css" rel="stylesheet">
               </head>
               <body>
                 <div class="content">
@@ -13,9 +14,9 @@ export default function template(title, content = "",preloadedState) {
                    </div>
                 </div>
                 <script>
-                window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g,'\\u003c')}
+                window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
                 </script>
-                <script src="/hackerNews/assets/bundle.js"> </script>
+                <script src="/hackerNews/web/index.js"> </script>
               </body>
               `;
 

@@ -21,7 +21,7 @@ const state = (page, news) => {
 }
 
 export const LineChart = ({ page, news }) =>
-    <div className="lineChart">
+    <div className="lineChart sticky">
         <Line
             data={state(page, news)}
             options={{

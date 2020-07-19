@@ -89,3 +89,11 @@ table {
   text-decoration: none;
   color: grey;
 }
+
+@media only screen and (max-width: 600px) {
+  .sticky{
+    background: white;
+    position: sticky;
+    bottom: 0;
+  }
+}

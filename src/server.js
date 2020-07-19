@@ -5,7 +5,7 @@ import configureStore from './redux/configureStore'
 import { HackerNews } from './components/index'
 import { StaticRouter } from 'react-router-dom'
 
-module.exports = function render(initialState, req) {
+export const server = (initialState, req) => {
   const store = configureStore(initialState)
   const context = {};
   let content = renderToString(

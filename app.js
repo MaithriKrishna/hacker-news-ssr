@@ -1,13 +1,13 @@
 import express from 'express'
 import path from 'path'
 import template from './src/template'
-import ssr from './src/server'
+import { server } from './src/server'
 import axios from "axios";
 
 const app = express()
 const port = process.env.PORT || 8080;
 
-app.use('/hackerNews/assets', express.static(path.resolve(__dirname, 'assets')));
+app.use('/hackerNews/web', express.static(path.resolve(__dirname, '../web')));
 
 const initialState = (res) => {
   return {
@@ -18,7 +18,7 @@ const initialState = (res) => {
 
 app.get('/hackerNews', (req, res) => {
   axios.get(`https://hn.algolia.com/api/v1/search?page=0`).then(function (response) {
-    const { content } = ssr(initialState(response.data), req)
+    const { content } = server(initialState(response.data), req)
     const html = template("Server Rendered Page", content, initialState(response.data))
     return res.send(html);
   },
@@ -28,7 +28,7 @@ app.get('/hackerNews', (req, res) => {
 app.get('/hackerNews/:page', (req, res) => {
   const page = req.params.page;
   axios.get(`https://hn.algolia.com/api/v1/search?page=${page}`).then(function (response) {
-    const { content } = ssr(initialState(response.data), req)
+    const { content } = server(initialState(response.data), req)
     const html = template("Server Rendered Page", content, initialState(response.data))
     return res.send(html);
   },

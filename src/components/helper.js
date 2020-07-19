@@ -1,3 +1,5 @@
+import { formatDistanceToNow } from "date-fns";
+
 export const updateNewsInLocalStorage = (news, objectID, hide) => {
     let localStorageData = getLocalStorageData(news.page);
     const index = localStorageData.hits.findIndex(data => data.objectID === objectID);
@@ -33,4 +35,13 @@ export const getChartData = (page, news) => {
         chartData.votes.push(news.points);
     })
     return chartData;
+}
+
+export const getFormattedTime = (time) => {
+    const date = new Date(time);
+    return formatDistanceToNow(date);
+}
+
+export const getDomainFromUrl = url => {
+    return url && url.replace('http://', '').replace('https://', '').split(/[/?#]/)[0];
 }

@@ -5,6 +5,7 @@ import { setLocalStorage, getLocalStorageData, setStateWithLocalStorage } from "
 import { LineChart } from "./lineChart";
 import { PaginationLinks } from "./paginationlinks";
 import { Routes } from "./routes";
+import "./style.css";
 
 const News = ({ isFetching, news, fetchNews, updateModifiedNews }) => {
 
