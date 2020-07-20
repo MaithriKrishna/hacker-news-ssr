@@ -3,3 +3,7 @@ os: linux
 files:
   - source: /
     destination: /dist
+hooks:
+  ApplicationStart:
+    - location: /build.sh
+      timeout: 180
