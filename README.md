@@ -14,6 +14,7 @@
  - Code Pipeline with source as GitHub
  - CodeBuild runs eslint, test cases as a prebuild commands before build
  - CodeDeploy for deploying the build artifact on EC2 instance
+ - On failure of deployment, it will  rolled back to successful deployment
 
 ### Approach
 

@@ -38,6 +38,7 @@ export const getChartData = (page, news) => {
 }
 
 export const getFormattedTime = (time) => {
+    if (!time) return "";
     const date = new Date(time);
     return formatDistanceToNow(date);
 }

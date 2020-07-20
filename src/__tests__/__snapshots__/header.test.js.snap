@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders header 1`] = `
+<tbody>
+  <tr>
+    <th>
+      Comments
+    </th>
+    <th>
+      Vote Count
+    </th>
+    <th>
+      UpVote
+    </th>
+    <th>
+      News Details
+    </th>
+  </tr>
+</tbody>
+`;
