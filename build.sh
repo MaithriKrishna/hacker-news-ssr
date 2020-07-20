@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd ./dist/node
-node ./main.js
+cd /dist/node
+node main.js
