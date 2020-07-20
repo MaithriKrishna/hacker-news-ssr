@@ -25,7 +25,7 @@
 
 https://dc2ftcucso24o.cloudfront.net/hackerNews
 
-![alt text]( "Diagram")
+![alt text](https://raw.githubusercontent.com/MaithriKrishna/hacker-news-ssr/master/flow.png "Diagram")
 
 
 
