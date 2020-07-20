@@ -1,1 +1,2 @@
-node ./dist/node/main.js
+cd ./dist/node
+node ./main.js
