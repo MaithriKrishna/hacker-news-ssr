@@ -20,7 +20,7 @@ export function updateModifiedNews(json) {
 export function fetchNews(page) {
   return dispatch => {
     dispatch(requestNews())
-    return axios.get(`https://hn.algolia.com/api/v1/search?page=${page}`).then(function (response) {
+    return axios.get(`https://hn.algolia.com/api/v1/search_by_date?page=${page}`).then(function (response) {
       dispatch(updateModifiedNews(response.data))
     },
     ).catch(function (err) { console.log("Fetch failed", err) })

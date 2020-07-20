@@ -6,13 +6,16 @@
   "scripts": {
     "lint": "eslint ./src/**/*.js",
     "build:node": "webpack --config ./webpack.node.config.js --env.production",
-    "build:web": "webpack --config ./webpack.web.config.js --env.production"
+    "build:web": "webpack --config ./webpack.web.config.js --env.production",
+    "test": "jest"
   },
   "author": "Maithri",
   "license": "ISC",
   "dependencies": {
     "@babel/register": "^7.8.6",
     "@loadable/component": "^5.13.1",
+    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/react": "^10.4.7",
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
     "css-loader": "^3.6.0",

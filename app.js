@@ -21,7 +21,7 @@ const initialState = (res) => {
 }
 
 app.get('/hackerNews', (req, res) => {
-  axios.get(`https://hn.algolia.com/api/v1/search?page=0`).then(function (response) {
+  axios.get(`https://hn.algolia.com/api/v1/search_by_date?page=0`).then(function (response) {
     const { content } = server(initialState(response.data), req)
     const html = template("Server Rendered Page", content, initialState(response.data))
     return res.send(html);
@@ -31,7 +31,7 @@ app.get('/hackerNews', (req, res) => {
 
 app.get('/hackerNews/:page', (req, res) => {
   const page = req.params.page;
-  axios.get(`https://hn.algolia.com/api/v1/search?page=${page}`).then(function (response) {
+  axios.get(`https://hn.algolia.com/api/v1/search_by_date?page=${page}`).then(function (response) {
     const { content } = server(initialState(response.data), req)
     const html = template("Server Rendered Page", content, initialState(response.data))
     return res.send(html);
