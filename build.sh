@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node /dist/dist/node/main.js
+nohup node /dist/dist/node/main.js &
