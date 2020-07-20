@@ -37,6 +37,10 @@ https://dc2ftcucso24o.cloudfront.net/hackerNews
 
  - SEO for improving user experience and usability of website
 
+ - Cloud Front as a CDN
+
+ - Response is gzipped by CloudFront
+
 
 
  
