@@ -32,13 +32,13 @@ export const getChartData = (page, news) => {
     }
     news.hits.map(news => {
         chartData.objectIds.push(news.objectID);
-        chartData.votes.push(news.points);
+        chartData.votes.push(news.points || 0 );
     })
     return chartData;
 }
 
 export const getFormattedTime = (time) => {
-    if (!time) return "";
+    if(!time) return "";
     const date = new Date(time);
     return formatDistanceToNow(date);
 }
